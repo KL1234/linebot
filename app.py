@@ -34,8 +34,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = TextSendMessage(text=event.message.text)
-    if event.message.text == "文字":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
+    if event.message.text == "吃什麼":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="大便"))
     
 
 import os
