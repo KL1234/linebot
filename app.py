@@ -36,10 +36,8 @@ def handle_message(event):
     message = TextSendMessage(text=event.message.text)
     if event.message.text.find("吃什麼") != -1:     
         a=2
-        if a<5 and a>=0
+        if a==2
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text="吃我的毛"))
-        else 
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="吃拉麵"))
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))    
     
