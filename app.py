@@ -52,7 +52,7 @@ def handle_message(event):
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))  
     if event.message.text.find("灰") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好笨"))            
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/RzKU1hM.jpg', preview_image_url='https://i.imgur.com/RzKU1hM.jpg'))            
     
 
 import os
