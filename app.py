@@ -36,11 +36,17 @@ def handle_message(event):
     message = TextSendMessage(text=event.message.text)
     if event.message.text.find("吃什麼") != -1:
         import random
-        a=random.randint(1,3)
+        a=random.randint(1,6)
         if a==1:
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text="吉野家"))
         if a==2:
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text="拉麵"))
+        if a==3:
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="添好運"))
+        if a==4:
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="椒麻雞"))
+        if a==5:
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="燒肉"))
         else:
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text="吃我的毛"))
     if event.message.text.find("黑豆") != -1:
