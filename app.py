@@ -35,7 +35,9 @@ def callback():
 def handle_message(event):
     message = TextSendMessage(text=event.message.text)
     if event.message.text.find("吃什麼") != -1:     
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="吃我的毛"))
+        a=2
+        if a==2
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="吃我的毛"))
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))    
     
