@@ -50,7 +50,9 @@ def handle_message(event):
         else:
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text="吃我的毛"))
     if event.message.text.find("黑豆") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))    
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))  
+    if event.message.text.find("灰") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好笨"))            
     
 
 import os
