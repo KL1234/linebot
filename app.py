@@ -55,6 +55,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="Q毛"))    
     if event.message.text.find("魚") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="啵啵啵啵啵啵啵啵"))
+    if event.message.text.find("肚子") != -1 or event.message.text.find("肚肚") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="肚子的肚子大大大"))
     if event.message.text.find("唱歌") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="哼哼哈ㄏ一ˋ 鹹魚七秒記憶\n哼哼哈ㄏ一ˋ 姬路城就是拉基\n哼哼哈ㄏ一ˋ AD名字就叫AD\n"))
     if event.message.text.find("時銘") != -1:
