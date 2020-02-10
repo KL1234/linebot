@@ -68,10 +68,60 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text="時銘:櫻花妹我來了!!!!!!"))
     if event.message.text.find("妹妹") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="妹妹乖喔"))
+    if event.message.text.find("欸") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="欸~~~~~(破音")) 
+    if event.message.text.find("難聽") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="欸.....很難聽")) 
+    if event.message.text.find("好累") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="嫩"))
+    if event.message.text.find("累死") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="嫩"))        
+    if event.message.text.find("ㄎㄎ") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="笨米ㄎㄎ吃蛋糕"))         
     if event.message.text.find("傻眼") != -1:
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(preview_image_url='https://i.imgur.com/r2v9qpw.jpg'))        
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/r2v9qpw.jpg', preview_image_url='https://i.imgur.com/r2v9qpw.jpg'))        
+    if event.message.text.find("虎") != -1:
+        import random
+        a=random.randint(1,8)
+        if a==1:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/rE06hft.jpg', preview_image_url='https://i.imgur.com/rE06hft.jpg'))        
+        if a==2:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/yps2gB1.jpg', preview_image_url='https://i.imgur.com/yps2gB1.jpg'))        
+        if a==3:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/AXVJd7M.jpg', preview_image_url='https://i.imgur.com/AXVJd7M.jpg'))        
+        if a==4:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/J6LRR2i.jpg', preview_image_url='https://i.imgur.com/J6LRR2i.jpg'))        
+        if a==5:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/vIPnwvi.jpg', preview_image_url='https://i.imgur.com/vIPnwvi.jpg'))        
+        if a==6:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/25drqpo.jpg', preview_image_url='https://i.imgur.com/25drqpo.jpg'))        
+        if a==7:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/LTb9P6x.jpg', preview_image_url='https://i.imgur.com/LTb9P6x.jpg'))        
+        else:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/r2v9qpw.jpg', preview_image_url='https://i.imgur.com/r2v9qpw.jpg'))        
     if event.message.text.find("灰") != -1:
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/RzKU1hM.jpg', preview_image_url='https://i.imgur.com/RzKU1hM.jpg'))            
+        import random
+        a=random.randint(1,10)
+        if a==1:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/X5yQVtV.jpg', preview_image_url='https://i.imgur.com/X5yQVtV.jpg'))        
+        if a==2:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/3tgaaiI.jpg', preview_image_url='https://i.imgur.com/3tgaaiI.jpg'))        
+        if a==3:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/ENhgcGd.jpg', preview_image_url='https://i.imgur.com/ENhgcGd.jpg'))        
+        if a==4:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/Ope3LpQ.jpg', preview_image_url='https://i.imgur.com/Ope3LpQ.jpg'))        
+        if a==5:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/C13WKX6.jpg', preview_image_url='https://i.imgur.com/C13WKX6.jpg'))        
+        if a==6:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/J4e41HY.jpg', preview_image_url='https://i.imgur.com/J4e41HY.jpg'))        
+        if a==7:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/85NyR92.jpg', preview_image_url='https://i.imgur.com/85NyR92.jpg'))        
+        if a==8:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/LqOSjSn.jpg', preview_image_url='https://i.imgur.com/LqOSjSn.jpg'))        
+        if a==9:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/K4Wra0N.jpg', preview_image_url='https://i.imgur.com/K4Wra0N.jpg'))            
+        else:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/r2v9qpw.jpg', preview_image_url='https://i.imgur.com/r2v9qpw.jpg'))                    
     
 
 import os
