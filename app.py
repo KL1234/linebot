@@ -69,9 +69,9 @@ def handle_message(event):
     if event.message.text.find("妹妹") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="妹妹乖喔"))
     if event.message.text.find("傻眼") != -1:
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/RzKU1hM.jpg', preview_image_url='https://i.imgur.com/RzKU1hM.jpg'))        
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(preview_image_url='https://i.imgur.com/r2v9qpw.jpg'))        
     if event.message.text.find("灰") != -1:
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/r2v9qpw.jpg'))            
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/RzKU1hM.jpg', preview_image_url='https://i.imgur.com/RzKU1hM.jpg'))            
     
 
 import os
