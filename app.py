@@ -50,7 +50,24 @@ def handle_message(event):
         else:
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text="吃我的毛"))
     if event.message.text.find("黑豆") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))  
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))
+    if event.message.text.find("權祐") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="Q毛"))    
+    if event.message.text.find("魚") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="啵啵啵啵啵啵啵啵"))
+    if event.message.text.find("唱歌") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="哼哼哈ㄏ一ˋ 鹹魚七秒記憶\n哼哼哈ㄏ一ˋ AD名字就叫AD\n"))
+    if event.message.text.find("時銘") != -1:
+        import random
+        a=random.randint(1,3)
+        if a==1:
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="傑尼傑尼"))
+        if a==2:
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="克里斯汀真香"))
+        else:
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="時銘:櫻花妹我來了!!!!!!"))
+    if event.message.text.find("妹妹") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="妹妹乖喔"))          
     if event.message.text.find("灰") != -1:
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/RzKU1hM.jpg', preview_image_url='https://i.imgur.com/RzKU1hM.jpg'))            
     
