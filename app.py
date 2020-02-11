@@ -69,9 +69,10 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/r2v9qpw.jpg', preview_image_url='https://i.imgur.com/r2v9qpw.jpg'))        
     if event.message.text.find("虎") != -1:
         import random
+        #四個一行
         list1 = ['https://i.imgur.com/rE06hft.jpg','https://i.imgur.com/yps2gB1.jpg','https://i.imgur.com/AXVJd7M.jpg','https://i.imgur.com/J6LRR2i.jpg',
         'https://i.imgur.com/vIPnwvi.jpg','https://i.imgur.com/25drqpo.jpg','https://i.imgur.com/LTb9P6x.jpg','https://i.imgur.com/r2v9qpw.jpg']
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=random.randint(0,7), preview_image_url=random.randint(0,7))
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=list1[random.randint(0,7)], preview_image_url=list1[random.randint(0,7)])
     if event.message.text.find("灰") != -1:
         import random
         a=random.randint(1,10)
