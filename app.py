@@ -36,8 +36,12 @@ def handle_message(event):
     message = TextSendMessage(text=event.message.text)
     if event.message.text.find("吃什麼") != -1:
         import random
-        list1 = ['吉野家','拉麵','添好運','椒麻雞','燒肉','吃我的毛']
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,5)]))
+        #四個一排
+        list1 = ['吉野家','拉麵','添好運','椒麻雞',
+        '燒肉','吃我的毛','牛排','胡椒廚房',
+        '火鍋','夜市','滷肉飯','牛肉麵',
+        '水餃']
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,12)]))
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))
     if event.message.text.find("權祐") != -1:
@@ -73,7 +77,7 @@ def handle_message(event):
         list1 = ['https://i.imgur.com/rE06hft.jpg','https://i.imgur.com/yps2gB1.jpg','https://i.imgur.com/AXVJd7M.jpg','https://i.imgur.com/J6LRR2i.jpg',
         'https://i.imgur.com/vIPnwvi.jpg','https://i.imgur.com/25drqpo.jpg','https://i.imgur.com/LTb9P6x.jpg','https://i.imgur.com/r2v9qpw.jpg']
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=list1[random.randint(0,7)], preview_image_url=list1[random.randint(0,7)]))
-    if event.message.text.find("欸") != -1:
+    if event.message.text.find("灰") != -1:
         import random
         #四個一行
         list1 = ['https://i.imgur.com/X5yQVtV.jpg','https://i.imgur.com/3tgaaiI.jpg','https://i.imgur.com/ENhgcGd.jpg','https://i.imgur.com/Ope3LpQ.jpg',
