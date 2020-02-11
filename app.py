@@ -8,45 +8,7 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
-import requests
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
 
-prefs = {
-    'profile.default_content_setting_values' :
-        {
-        'notifications' : 2
-         }
-}
-options.add_experimental_option('prefs',prefs)
-options.add_argument("--headless")            #不開啟實體瀏覽器背景執行
-options.add_argument("--incognito")           #開啟無痕模式
-driver = webdriver.Chrome(options=options)
-
-driver.get("https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=6400900") 
-
-Temp = driver.find_element_by_id('GT_C_T').text
-bodyTemp = driver.find_element_by_id('GT_C_AT').text
-RelativeHumidity = driver.find_element_by_id('GT_RH').text
-Rain = driver.find_element_by_id('GT_Rain').text
-Sunrise = driver.find_element_by_id('GT_Sunrise').text
-Sunset = driver.find_element_by_id('GT_Sunset').text
-driver.quit()
-#建立LINE訊息要出現的內容
-content="\n"+"前鎮區天氣概況"+"\n"+"\n"+"現在溫度 : "+Temp+"°C"+"\n"+"體感溫度 : "+bodyTemp+"°C"+"\n"+"相對溼度 : "+RelativeHumidity+"%"+"\n"+"降雨量 : "+Rain+"mm"+"\n"+"日出時間 : "+Sunrise+"\n"+"日落時間 : "+Sunset
-#建立一個傳送訊息的函式
-def lineNotifyMessage(token, msg):
-    headers = {
-          "Authorization": "Bearer " + token, 
-          "Content-Type" : "application/x-www-form-urlencoded"
-      }
-    payload = {'message': msg}
-    r = requests.post("https://notify-api.line.me/api/notify", headers = headers, params = payload)
-    return r.status_code
-#修改為你的權杖內容(將yourToken換成在申請到的LINE官方Token)
-token = 'HgSH/M7XimOt6yMVTwc5m1yA2jKqmTaZOzavFMFl9pnRKJ14pmD4CH7eBisXb03/1Gv+0e3iW6jKEMj6FJpbfFfqz9XWIEUUVeQhlCPM7jgUG6+KEztr/0k9jG5gMncY1a6hoC8IG+b3egiAkbwMDAdB04t89/1O/w1cDnyilFU='
-lineNotifyMessage(token, content)
 
 app = Flask(__name__)
 
@@ -91,7 +53,7 @@ def handle_message(event):
     if event.message.text.find("肚子") != -1 or event.message.text.find("肚肚") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="肚子的肚子大大大"))
     if event.message.text.find("唱歌") != -1:
-        import random
+    import random
         list1 = ['哼哼哈ㄏ一ˋ 鹹魚七秒記憶\n哼哼哈ㄏ一ˋ 姬路城就是拉基\n哼哼哈ㄏ一ˋ AD名字就叫AD\n',
         '啦~~~~~~啦~~~~~~~~~啦~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
         '當緣分讓我們相遇在光年之外~~~']
