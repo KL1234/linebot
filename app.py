@@ -69,10 +69,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="欸~~~~~(破音")) 
     if event.message.text.find("難聽") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="欸.....很難聽")) 
-    if event.message.text.find("好累") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="嫩"))
-    if event.message.text.find("累死") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="嫩"))        
+    if event.message.text.find("累死") != -1 or event.message.text.find("好累") != -1 or event.message.text.find("超累") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="嫩!"))
     if event.message.text.find("ㄎㄎ") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="笨米ㄎㄎ吃蛋糕"))         
     if event.message.text.find("傻眼") != -1:
