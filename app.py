@@ -36,7 +36,8 @@ def handle_message(event):
     message = TextSendMessage(text=event.message.text)
     if event.message.text.find("吃什麼") != -1:
         import random
-        list1 = ['吉野家','拉麵','添好運','椒麻雞','燒肉','吃我的毛']
+        list1 = ['吉野家','拉麵','添好運','椒麻雞',
+        '燒肉','吃我的毛']
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[arandom.randint(0,5)]))
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))
