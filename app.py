@@ -75,27 +75,12 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=list1[random.randint(0,7)], preview_image_url=list1[random.randint(0,7)]))
     if event.message.text.find("欸") != -1:
         import random
-        a=random.randint(1,10)
-        if a==1:
-            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/X5yQVtV.jpg', preview_image_url='https://i.imgur.com/X5yQVtV.jpg'))        
-        if a==2:
-            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/3tgaaiI.jpg', preview_image_url='https://i.imgur.com/3tgaaiI.jpg'))        
-        if a==3:
-            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/ENhgcGd.jpg', preview_image_url='https://i.imgur.com/ENhgcGd.jpg'))        
-        if a==4:
-            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/Ope3LpQ.jpg', preview_image_url='https://i.imgur.com/Ope3LpQ.jpg'))        
-        if a==5:
-            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/C13WKX6.jpg', preview_image_url='https://i.imgur.com/C13WKX6.jpg'))        
-        if a==6:
-            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/J4e41HY.jpg', preview_image_url='https://i.imgur.com/J4e41HY.jpg'))        
-        if a==7:
-            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/85NyR92.jpg', preview_image_url='https://i.imgur.com/85NyR92.jpg'))        
-        if a==8:
-            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/LqOSjSn.jpg', preview_image_url='https://i.imgur.com/LqOSjSn.jpg'))        
-        if a==9:
-            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/K4Wra0N.jpg', preview_image_url='https://i.imgur.com/K4Wra0N.jpg'))            
-        else:
-            line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/r2v9qpw.jpg', preview_image_url='https://i.imgur.com/r2v9qpw.jpg'))                    
+        #四個一行
+        list1 = ['https://i.imgur.com/X5yQVtV.jpg','https://i.imgur.com/3tgaaiI.jpg','https://i.imgur.com/ENhgcGd.jpg','https://i.imgur.com/Ope3LpQ.jpg',
+        'https://i.imgur.com/C13WKX6.jpg','https://i.imgur.com/J4e41HY.jpg','https://i.imgur.com/85NyR92.jpg','https://i.imgur.com/LqOSjSn.jpg',
+        'https://i.imgur.com/K4Wra0N.jpg','https://i.imgur.com/r2v9qpw.jpg']
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=list1[random.randint(0,9)], preview_image_url=list1[random.randint(0,9)]))
+     
     
 
 import os
