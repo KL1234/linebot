@@ -45,7 +45,11 @@ def handle_message(event):
         '水餃','不要吃','吃黑豆的毛','泰式']
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,15)]))
     if event.message.text.find("精靈") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="你才精靈 你全家精靈"))   
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="你才精靈 你全家精靈"))
+    if event.message.text.find("KL") != -1 or event.message.text.find("kl") != -1 or event.message.text.find("明融") != -1 or event.message.text.find("融融") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="KL大帥哥"))
+    if event.message.text.find("妹妹") != -1 or event.message.text.find("聖:D") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="妹妹乖喔"))    
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))
     if event.message.text.find("螃蟹") != -1 or event.message.text.find("誼靜") != -1:
@@ -69,8 +73,6 @@ def handle_message(event):
         list1 = ['傑尼傑尼','克里斯汀真香',
         '時銘:櫻花妹我來了!!!!!!']
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,2)]))
-    if event.message.text.find("妹妹") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="妹妹乖喔"))
     if event.message.text.find("欸") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="欸~~~~~(破音")) 
     if event.message.text.find("難聽") != -1:
