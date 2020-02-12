@@ -42,15 +42,21 @@ def handle_message(event):
         list1 = ['吉野家','拉麵','添好運','椒麻雞',
         '燒肉','吃我的毛','牛排','胡椒廚房',
         '火鍋','夜市','滷肉飯','牛肉麵',
-        '水餃']
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,12)]))
+        '水餃','不要吃','吃黑豆的毛','泰式']
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,15)]))
+    if event.message.text.find("精靈") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="你才精靈 你全家精靈"))   
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))
-    if event.message.text.find("權祐") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="Q毛"))    
-    if event.message.text.find("魚") != -1:
+    if event.message.text.find("螃蟹") != -1 or event.message.text.find("誼靜") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="螃蟹最喜歡黑豆了"))    
+    if event.message.text.find("權祐") != -1 or event.message.text.find("木子") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="Q毛"))   
+    if event.message.text.find("奕翔") != -1 or event.message.text.find("AD") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="奕翔是誰? AD名字就叫AD"))        
+    if event.message.text.find("魚") != -1 or event.message.text.find("禹賢") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="啵啵啵啵啵啵啵啵"))
-    if event.message.text.find("肚子") != -1 or event.message.text.find("肚肚") != -1:
+    if event.message.text.find("肚子") != -1 or event.message.text.find("肚肚") != -1 or event.message.text.find("書緯") != -1 or event.message.text.find("書瑋") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="肚子的肚子大大大"))
     if event.message.text.find("唱歌") != -1:
         import random
@@ -58,7 +64,7 @@ def handle_message(event):
         '啦~~~~~~啦~~~~~~~~~啦~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
         '當緣分讓我們相遇在光年之外~~~']
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,2)]))
-    if event.message.text.find("時銘") != -1:
+    if event.message.text.find("時銘") != -1 or event.message.text.find("傑尼") != -1:
         import random
         list1 = ['傑尼傑尼','克里斯汀真香',
         '時銘:櫻花妹我來了!!!!!!']
@@ -79,7 +85,7 @@ def handle_message(event):
         import random
         #四個一行
         list1 = ['https://i.imgur.com/rE06hft.jpg','https://i.imgur.com/yps2gB1.jpg','https://i.imgur.com/AXVJd7M.jpg','https://i.imgur.com/J6LRR2i.jpg',
-        'https://i.imgur.com/vIPnwvi.jpg','https://i.imgur.com/25drqpo.jpg','https://i.imgur.com/LTb9P6x.jpg','https://i.imgur.com/r2v9qpw.jpg']
+        'https://i.imgur.com/vIPnwvi.jpg','https://i.imgur.com/25drqpo.jpg','https://i.imgur.com/LTb9P6x.jpg','https://i.imgur.com/RuK4kjY.jpg']
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=list1[random.randint(0,7)], preview_image_url=list1[random.randint(0,7)]))
     if event.message.text.find("灰") != -1:
         import random
@@ -88,8 +94,6 @@ def handle_message(event):
         'https://i.imgur.com/C13WKX6.jpg','https://i.imgur.com/J4e41HY.jpg','https://i.imgur.com/85NyR92.jpg','https://i.imgur.com/LqOSjSn.jpg',
         'https://i.imgur.com/K4Wra0N.jpg','https://i.imgur.com/r2v9qpw.jpg']
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=list1[random.randint(0,9)], preview_image_url=list1[random.randint(0,9)]))
-     
-    
 
 import os
 if __name__ == "__main__":
