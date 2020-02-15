@@ -46,6 +46,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,15)]))
     if event.message.text.find("精靈") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="你才精靈 你全家精靈"))
+    if event.message.text.find("幾點") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="歡樂21點"))    
     if event.message.text.find("KL") != -1 or event.message.text.find("kl") != -1 or event.message.text.find("明融") != -1 or event.message.text.find("融融") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="KL大帥哥"))
     if event.message.text.find("妹妹") != -1 or event.message.text.find("聖:D") != -1:
