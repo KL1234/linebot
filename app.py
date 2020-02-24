@@ -115,7 +115,7 @@ def handle_message(event):
         'https://imgur.com/xERMF7i','https://imgur.com/icmUB5a','https://imgur.com/8fM5IG3','https://imgur.com/6k12hci',
         'https://imgur.com/aeSMY3W','https://imgur.com/0CiLTa2','https://imgur.com/58nraOg','https://imgur.com/RIIxMCD',
         'https://imgur.com/bVMYeqk']
-        a=random.randint(0,9)
+        a=random.randint(0,12)
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=list1[a], preview_image_url=list1[a]))
 import os
 if __name__ == "__main__":
