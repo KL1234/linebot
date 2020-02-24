@@ -35,7 +35,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text=event.message.text)
+    message = TextSendMessage(text=event.message.text).upper()
     if event.message.text.find("吃什麼") != -1:
         import random
         #四個一排
@@ -47,7 +47,7 @@ def handle_message(event):
     if event.message.text.find("精靈") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="你才精靈 你全家精靈"))
     if event.message.text.find("幾點") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="歡樂21點"))    
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="歡樂21點 "))    
     if event.message.text.find("KL") != -1 or event.message.text.find("kl") != -1 or event.message.text.find("明融") != -1 or event.message.text.find("融融") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="KL大帥哥"))
     if event.message.text.find("妹妹") != -1 or event.message.text.find("聖:D") != -1:
@@ -55,7 +55,17 @@ def handle_message(event):
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))
     if event.message.text.find("螃蟹") != -1 or event.message.text.find("誼靜") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="螃蟹最喜歡黑豆了"))    
+        import random
+        list1 = ['螃蟹最喜歡黑豆了',
+        '螃蟹最喜歡黑豆了',
+        '螃蟹最喜歡黑豆了',
+        '螃蟹最喜歡灰灰了',
+        '螃蟹最喜歡虎虎了',
+        '螃蟹最喜歡斑斑了',
+        ]
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,2)]))
+    if event.message.text.find("RZ") != -1 or event.message.text.find("聖:D") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="妹妹乖喔"))            
     if event.message.text.find("權祐") != -1 or event.message.text.find("木子") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="Q毛"))   
     if event.message.text.find("奕翔") != -1 or event.message.text.find("AD") != -1:
