@@ -109,7 +109,14 @@ def handle_message(event):
         'https://i.imgur.com/K4Wra0N.jpg','https://i.imgur.com/r2v9qpw.jpg']
         a=random.randint(0,9)
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=list1[a], preview_image_url=list1[a]))
-
+    if event.message.text.find("斑斑") != -1 or event.message.text.find("班班") != -1:
+        import random
+        #四個一行
+        list1 = ['https://i.imgur.com/X5yQVtV.jpg','https://i.imgur.com/3tgaaiI.jpg','https://i.imgur.com/ENhgcGd.jpg','https://i.imgur.com/Ope3LpQ.jpg',
+        'https://i.imgur.com/C13WKX6.jpg','https://i.imgur.com/J4e41HY.jpg','https://i.imgur.com/85NyR92.jpg','https://i.imgur.com/LqOSjSn.jpg',
+        'https://i.imgur.com/K4Wra0N.jpg','https://i.imgur.com/r2v9qpw.jpg']
+        a=random.randint(0,9)
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=list1[a], preview_image_url=list1[a]))
 import os
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
