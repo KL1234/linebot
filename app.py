@@ -35,7 +35,8 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text=event.message.text.upper())
+    message = TextSendMessage(text=event.message.text)
+    message = message.upper()
     if event.message.text.find("吃什麼") != -1:
         import random
         #四個一排
@@ -63,7 +64,7 @@ def handle_message(event):
         '螃蟹最喜歡虎虎了',
         '螃蟹最喜歡斑斑了',
         ]
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,2)]))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,5)]))
     if event.message.text.find("RZ") != -1 or event.message.text.find("聖:D") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="妹妹乖喔"))            
     if event.message.text.find("權祐") != -1 or event.message.text.find("木子") != -1:
