@@ -111,10 +111,10 @@ def handle_message(event):
     if event.message.text.find("斑斑") != -1 or event.message.text.find("班班") != -1:
         import random
         #四個一行
-        list1 = ['https://imgur.com/VTpUUgx','https://imgur.com/Xlu4NLB','https://imgur.com/00350d8','https://imgur.com/Jgp0eUY',
-        'https://imgur.com/xERMF7i','https://imgur.com/icmUB5a','https://imgur.com/8fM5IG3','https://imgur.com/6k12hci',
-        'https://imgur.com/aeSMY3W','https://imgur.com/0CiLTa2','https://imgur.com/58nraOg','https://imgur.com/RIIxMCD',
-        'https://imgur.com/bVMYeqk']
+        list1 = ['https://i.imgur.com/VTpUUgx.jpg','https://i.imgur.com/Xlu4NLB.jpg','https://i.imgur.com/00350d8.jpg','https://i.imgur.com/Jgp0eUY.jpg',
+        'https://i.imgur.com/xERMF7i.jpg','https://i.imgur.com/icmUB5a.jpg','https://i.imgur.com/8fM5IG3.jpg','https://i.imgur.com/6k12hci.jpg',
+        'https://i.imgur.com/aeSMY3W.jpg','https://i.imgur.com/0CiLTa2.jpg','https://i.imgur.com/58nraOg.jpg','https://i.imgur.com/RIIxMCD.jpg',
+        'https://i.imgur.com/bVMYeqk.jpg']
         a=random.randint(0,12)
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=list1[a], preview_image_url=list1[a]))
 import os
