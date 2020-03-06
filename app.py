@@ -90,7 +90,9 @@ def handle_message(event):
     if event.message.text.find("累死") != -1 or event.message.text.find("好累") != -1 or event.message.text.find("超累") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="嫩!"))
     if event.message.text.find("ㄎㄎ") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="笨米ㄎㄎ吃蛋糕"))         
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="笨米ㄎㄎ吃蛋糕"))  
+    if event.message.text.find("測試") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="test"))             
     if event.message.text.find("傻眼") != -1:
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/r2v9qpw.jpg', preview_image_url='https://i.imgur.com/r2v9qpw.jpg'))        
     if event.message.text.find("虎") != -1:
