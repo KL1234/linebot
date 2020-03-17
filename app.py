@@ -45,7 +45,7 @@ def handle_message(event):
         '水餃','不要吃','吃黑豆的毛','泰式']
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,15)]))
     if event.message.text.find("笨蛋") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="傑尼"))  
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="傑尼"),TextSendMessage(text="傑尼"))  
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))  
     if event.message.text.find("糖糖") != -1:
