@@ -43,9 +43,10 @@ def handle_message(event):
         '燒肉','吃我的毛','牛排','胡椒廚房',
         '火鍋','夜市','滷肉飯','牛肉麵',
         '水餃','不要吃','吃黑豆的毛','泰式']
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,15)]))
+        line_bot_api.reply_message(event.reply_token,LocationSendMessage(title='my location', address='Tainan', latitude=22.994821, longitude=120.196452))
+        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,15)]))
     if event.message.text.find("笨蛋") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="傑尼"),TextSendMessage(text="傑尼"))  
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="傑尼"))  
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))  
     if event.message.text.find("糖糖") != -1:
