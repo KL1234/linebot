@@ -68,8 +68,6 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text="克莉絲丁真香"))
         else:
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text="傑尼傑尼"))
-    if event.message.text.find("灰") != -1:
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/RzKU1hM.jpg', preview_image_url='https://i.imgur.com/RzKU1hM.jpg'))            
     if event.message.text.find("當機") != -1:
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/RuK4kjY.jpg', preview_image_url='https://i.imgur.com/RuK4kjY.jpg'))
         #四個一排
