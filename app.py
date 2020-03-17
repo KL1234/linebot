@@ -38,27 +38,18 @@ def handle_message(event):
     message = TextSendMessage(text=event.message.text)
     if event.message.text.find("吃什麼") != -1:
         import random
-        a=random.randint(1,6)
-        if a==1:
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="吉野家"))
-        if a==2:
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="拉麵"))
-        if a==3:
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="添好運"))
-        if a==4:
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="椒麻雞"))
-        if a==5:
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="燒肉"))
-        else:
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="吃我的毛"))
+        #四個一排
+        list1 = ['吉野家','拉麵','添好運','椒麻雞',
+        '燒肉','吃我的毛','牛排','胡椒廚房',
+        '火鍋','夜市','滷肉飯','牛肉麵',
+        '水餃','不要吃','吃黑豆的毛','泰式']
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,15)]))
     if event.message.text.find("笨蛋") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="傑尼"))  
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))  
     if event.message.text.find("糖糖") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="糖什麼糖????"))
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="本虎無論智商顏質都屌打糖糖"))   
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="本虎要靠魅力征服人類!!!!!"))            
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="糖什麼糖????\n本虎無論智商顏質都屌打糖糖\n本虎要靠魅力征服人類!!!!!"))
     if event.message.text.find("妹妹") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="妹妹乖喔"))
     if event.message.text.find("謝時銘") != -1:
@@ -70,16 +61,10 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text="傑尼傑尼"))
     if event.message.text.find("當機") != -1:
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://i.imgur.com/RuK4kjY.jpg', preview_image_url='https://i.imgur.com/RuK4kjY.jpg'))
-        #四個一排
-        list1 = ['吉野家','拉麵','添好運','椒麻雞',
-        '燒肉','吃我的毛','牛排','胡椒廚房',
-        '火鍋','夜市','滷肉飯','牛肉麵',
-        '水餃','不要吃','吃黑豆的毛','泰式']
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,15)]))
     if event.message.text.find("精靈") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="你才精靈 你全家精靈"))
     if event.message.text.find("RZ") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="RZ怎麼沒有簽下去"))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="RZ:研華我來惹!!!!"))
     if event.message.text.find("幾點") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="歡樂21點 "))    
     if event.message.text.find("KL") != -1 or event.message.text.find("kl") != -1 or event.message.text.find("明融") != -1 or event.message.text.find("融融") != -1:
