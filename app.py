@@ -46,7 +46,9 @@ def handle_message(event):
         #line_bot_api.reply_message(event.reply_token,LocationSendMessage(title='欣園椒麻雞', address='Taipei', latitude=25.044229, longitude=121.516455))
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,15)]))    
     if event.message.text.find("笨蛋") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="傑尼"))  
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="傑尼"))
+    if event.message.text.find("切蛋蛋") != -1 or event.message.text.find("切掉蛋蛋") != -1 or event.message.text.find("沒有蛋蛋") != -1 or event.message.text.find("蛋蛋不見") != -1:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="幹"))          
     if event.message.text.find("黑豆") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))  
     if event.message.text.find("糖糖") != -1:
