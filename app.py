@@ -42,9 +42,11 @@ def handle_message(event):
         list1 = ['吉野家','拉麵','添好運','椒麻雞',
         '燒肉','吃我的毛','牛排','胡椒廚房',
         '火鍋','夜市','滷肉飯','牛肉麵',
-        '水餃','不要吃','吃黑豆的毛','泰式']
+        '水餃','不要吃','吃黑豆的毛','泰式',
+        '漢堡王','肯德基','麥當當','摩斯',
+        '頂呱呱','滷味','炒泡麵','早餐店',]
         #line_bot_api.reply_message(event.reply_token,LocationSendMessage(title='欣園椒麻雞', address='Taipei', latitude=25.044229, longitude=121.516455))
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,15)]))    
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=list1[random.randint(0,23)]))    
     if event.message.text.find("笨蛋") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="傑尼"))
     if event.message.text.find("切蛋蛋") != -1 or event.message.text.find("切掉蛋蛋") != -1 or event.message.text.find("沒有蛋蛋") != -1 or event.message.text.find("蛋蛋不見") != -1:
