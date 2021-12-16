@@ -52,7 +52,7 @@ def handle_message(event):
     if event.message.text.find("切蛋蛋") != -1 or event.message.text.find("切掉蛋蛋") != -1 or event.message.text.find("沒有蛋蛋") != -1 or event.message.text.find("蛋蛋不見") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="幹"))          
     if event.message.text.find("黑豆") != -1:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="好可愛"))  
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="可愛"))  
     if event.message.text.find("糖糖") != -1:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="糖什麼糖????\n本虎無論智商顏質都屌打糖糖\n本虎要靠魅力征服人類!!!!!"))
     if event.message.text.find("妹妹") != -1:
